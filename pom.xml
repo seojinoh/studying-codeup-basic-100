@@ -14,6 +14,7 @@
 	<name>codeup-basic-100</name>
 	<description>Project to study codeup basic 100</description>
 	<properties>
+		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
 		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
