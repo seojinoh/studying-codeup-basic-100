@@ -32,7 +32,7 @@ public class CodeupBasic100Application {
 	}
 
 	private static String getExample(String exampleNumber) throws Exception {
-		return "me.seojinoh.studying.codeupBasic100.example" + exampleNumber;
+		return "me.seojinoh.studying.codeupBasic100.Example" + exampleNumber;
 	}
 
 	private static void runExample(String example) throws Exception {
