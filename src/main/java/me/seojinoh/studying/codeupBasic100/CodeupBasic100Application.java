@@ -17,38 +17,44 @@ public class CodeupBasic100Application {
 	}
 
 	private static void runApplication() {
+		String exampleNumber = "";
+
 		while(true) {
 			try {
-				System.out.println("\n예제 번호를 입력해 주세요. (01 ~ 99)");
+				System.out.println("\n예제 번호(01-99)를 입력하세요.");
 
 				Scanner scanner = new Scanner(System.in, "UTF-8");
-				String exampleNumber = scanner.nextLine();
+				exampleNumber = scanner.nextLine();
 
-				runExample(getExample(exampleNumber));
+				runExample(exampleNumber);
 			} catch (Exception e) {
-				System.out.println(String.format("\n%s ::: %s", "예외가 발생하였습니다.", e.getMessage()));
+				System.err.println("\n" + exampleNumber + "번 예제 실행 중 에러가 발생했습니다.\n" + e.getMessage());
 			}
 		}
 	}
 
-	private static String getExample(String exampleNumber) throws Exception {
-		return "me.seojinoh.studying.codeupBasic100.Example" + exampleNumber;
-	}
+	private static void runExample(String exampleNumber) throws Exception {
+		String example = "";
 
-	private static void runExample(String example) throws Exception {
 		try {
+			example = getExample(exampleNumber);
+
 			Class exampleClass = Class.forName(example);
 			Object exampleInstance = exampleClass.newInstance();
 
 			Class params[] = {};
 			Method exampleMethod = exampleClass.getMethod("run", params);
 
-			System.out.println(String.format("\n%s ::: %s", "예제를 시작합니다.", example));
+			System.out.println("\n" + exampleNumber + "번 예제를 시작합니다.");
 
 			exampleMethod.invoke(exampleInstance, null);
 		} catch (Exception e) {
-			throw new Exception(example.equals(e.getMessage()) ? example : e.getMessage());
+			throw new Exception(example.equals(e.getMessage()) ? exampleNumber : e.getMessage());
 		}
+	}
+
+	private static String getExample(String exampleNumber) throws Exception {
+		return "me.seojinoh.studying.codeupBasic100.Example" + exampleNumber;
 	}
 
 }
