@@ -1,4 +1,4 @@
-# Studying Codeup Basic 100
+# Studying CodeUp Basic 100
 
 ## Project Overview
 
