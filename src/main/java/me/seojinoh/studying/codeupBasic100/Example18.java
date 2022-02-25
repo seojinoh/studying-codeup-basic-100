@@ -7,13 +7,10 @@ public class Example18 implements IExample {
 	public void run() {
 		Scanner scanner = new Scanner(System.in, "UTF-8");
 
-		String[] inputs;
-		String h, m;
+		String[] inputs = scanner.next().split(":", 2);
 
-		inputs = scanner.next().split(":", 2);
-
-		h = inputs[0];
-		m = inputs[1];
+		String h = inputs[0];
+		String m = inputs[1];
 
 		System.out.println(h + ":" + m);
 	}
