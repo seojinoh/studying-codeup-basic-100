@@ -7,12 +7,12 @@ public class Example25 implements IExample {
 	public void run() {
 		Scanner scanner = new Scanner(System.in, "UTF-8");
 
-		String[] inputs = scanner.next().split("", 5);
+		char[] inputs = scanner.next().toCharArray();
 
 		int n = 10000;
 
-		for(String input : inputs) {
-			System.out.println("[" + Integer.parseInt(input) * n + "]");
+		for(char input : inputs) {
+			System.out.println("[" + Integer.parseInt(String.valueOf(input)) * n + "]");
 
 			n = n / 10;
 		}
