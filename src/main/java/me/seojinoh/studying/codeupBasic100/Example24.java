@@ -7,9 +7,9 @@ public class Example24 implements IExample {
 	public void run() {
 		Scanner scanner = new Scanner(System.in, "UTF-8");
 
-		String[] inputs = scanner.next().split("");
+		char[] inputs = scanner.next().toCharArray();
 
-		for(String input : inputs) {
+		for(char input : inputs) {
 			System.out.println("'" + input + "'");
 		}
 	}
