@@ -7,7 +7,7 @@ public class Example76 implements IExample {
 	public void run() {
 		Scanner scanner = new Scanner(System.in, "UTF-8");
 
-		char input = scanner.next().toCharArray()[0];
+		char input = scanner.next().charAt(0);
 
 		int start = (int) 'a';
 		int end = (int) input;
