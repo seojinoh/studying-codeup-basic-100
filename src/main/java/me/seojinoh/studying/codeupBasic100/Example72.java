@@ -8,6 +8,7 @@ public class Example72 implements IExample {
 		Scanner scanner = new Scanner(System.in, "UTF-8");
 
 		int count = scanner.nextInt();
+
 		int[] inputs = new int[count];
 
 		for(int i = 0; i < count; i++) {
