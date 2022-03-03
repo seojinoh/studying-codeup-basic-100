@@ -8,7 +8,7 @@ public class Example79 implements IExample {
 		Scanner scanner = new Scanner(System.in, "UTF-8");
 
 		while(true) {
-			char input = scanner.next().toCharArray()[0];
+			char input = scanner.next().charAt(0);
 
 			System.out.println(input);
 
