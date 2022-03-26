@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-`CodeUp`의 `기초 100제`를 Java로 공부하기 위한 프로젝트
+`Java`로 `CodeUp`의 `기초 100제`를 공부하기 위한 프로젝트
 
 ### References
 
